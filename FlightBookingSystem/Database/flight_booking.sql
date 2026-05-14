@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS flight_booking_db;
+USE flight_booking_db;
+DROP TABLE IF EXISTS Payments,Bookings,Seats,Flights,Routes,Airlines,Airports,Users;
+CREATE TABLE Users(Id INT AUTO_INCREMENT PRIMARY KEY,FullName VARCHAR(100),Email VARCHAR(120) UNIQUE,PasswordHash VARCHAR(255),Role VARCHAR(20),CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE Airports(Id INT AUTO_INCREMENT PRIMARY KEY,Code VARCHAR(10),Name VARCHAR(120),City VARCHAR(80),Country VARCHAR(80));
+CREATE TABLE Airlines(Id INT AUTO_INCREMENT PRIMARY KEY,Name VARCHAR(120),Code VARCHAR(10));
+CREATE TABLE Routes(Id INT AUTO_INCREMENT PRIMARY KEY,OriginAirportId INT,DestinationAirportId INT,FOREIGN KEY(OriginAirportId) REFERENCES Airports(Id),FOREIGN KEY(DestinationAirportId) REFERENCES Airports(Id));
+CREATE TABLE Flights(Id INT AUTO_INCREMENT PRIMARY KEY,FlightNumber VARCHAR(30),AirlineId INT,RouteId INT,DepartureTime DATETIME,ArrivalTime DATETIME,Price DECIMAL(10,2),Status VARCHAR(30),FOREIGN KEY(AirlineId) REFERENCES Airlines(Id),FOREIGN KEY(RouteId) REFERENCES Routes(Id));
+CREATE TABLE Seats(Id INT AUTO_INCREMENT PRIMARY KEY,FlightId INT,SeatNumber VARCHAR(10),ClassType VARCHAR(30),IsBooked BIT DEFAULT 0,FOREIGN KEY(FlightId) REFERENCES Flights(Id));
+CREATE TABLE Bookings(Id INT AUTO_INCREMENT PRIMARY KEY,ReferenceNo VARCHAR(50),UserId INT,FlightId INT,SeatId INT,PassengerName VARCHAR(120),Status VARCHAR(30),BookingDate DATETIME DEFAULT CURRENT_TIMESTAMP,UNIQUE KEY unique_flight_seat(FlightId,SeatId),FOREIGN KEY(UserId) REFERENCES Users(Id),FOREIGN KEY(FlightId) REFERENCES Flights(Id),FOREIGN KEY(SeatId) REFERENCES Seats(Id));
+CREATE TABLE Payments(Id INT AUTO_INCREMENT PRIMARY KEY,BookingId INT,Amount DECIMAL(10,2),Method VARCHAR(30),Status VARCHAR(30),PaidAt DATETIME DEFAULT CURRENT_TIMESTAMP,FOREIGN KEY(BookingId) REFERENCES Bookings(Id));
+INSERT INTO Users(FullName,Email,PasswordHash,Role) VALUES('System Admin','admin@flight.com','$2a$11$wqVvUF5Afo5Tf5I1mQwmS.ROrd9UDiGpqCQ8VQu1t9VoI9c49qS9K','Admin'),('Juan Dela Cruz','user@flight.com','$2a$11$wqVvUF5Afo5Tf5I1mQwmS.ROrd9UDiGpqCQ8VQu1t9VoI9c49qS9K','User');
+INSERT INTO Airports(Code,Name,City,Country) VALUES('MNL','Ninoy Aquino International Airport','Manila','Philippines'),('CEB','Mactan Cebu International Airport','Cebu','Philippines'),('DVO','Francisco Bangoy International Airport','Davao','Philippines');
+INSERT INTO Airlines(Name,Code) VALUES('Philippine Airlines','PAL'),('Cebu Pacific','CEB');
+INSERT INTO Routes(OriginAirportId,DestinationAirportId) VALUES(1,2),(1,3),(2,1);
+INSERT INTO Flights(FlightNumber,AirlineId,RouteId,DepartureTime,ArrivalTime,Price,Status) VALUES('PAL-101',1,1,'2026-06-01 08:00:00','2026-06-01 09:20:00',3500,'Scheduled'),('CEB-202',2,2,'2026-06-02 10:00:00','2026-06-02 11:50:00',4200,'Scheduled');
+INSERT INTO Seats(FlightId,SeatNumber,ClassType,IsBooked) VALUES(1,'A1','Business',0),(1,'A2','Business',0),(1,'A3','Economy',0),(1,'A4','Economy',0),(2,'A1','Business',0),(2,'A2','Economy',0);

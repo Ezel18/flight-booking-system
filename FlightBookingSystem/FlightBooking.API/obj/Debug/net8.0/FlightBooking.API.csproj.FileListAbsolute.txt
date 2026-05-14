@@ -1,0 +1,8 @@
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.API\obj\Debug\net8.0\FlightBooking.API.csproj.AssemblyReference.cache
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.API\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.API\obj\Debug\net8.0\FlightBooking.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.API\obj\Debug\net8.0\FlightBooking.API.AssemblyInfoInputs.cache
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.API\obj\Debug\net8.0\FlightBooking.API.AssemblyInfo.cs
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.API\obj\Debug\net8.0\FlightBooking.API.csproj.CoreCompileInputs.cache
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.API\obj\Debug\net8.0\FlightBooking.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.API\obj\Debug\net8.0\FlightBooking.API.MvcApplicationPartsAssemblyInfo.cache

@@ -1,0 +1,2 @@
+using Microsoft.AspNetCore.Mvc; namespace WebApp.Controllers;
+public class FlightsController:Controller{private readonly IHttpClientFactory _f; public FlightsController(IHttpClientFactory f){_f=f;} public async Task<IActionResult> Index(string? origin,string? destination,string? date){var c=_f.CreateClient("api"); var url=$"api/flights?origin={origin}&destination={destination}&date={date}"; ViewBag.Flights=await c.GetStringAsync(url); return View();}}

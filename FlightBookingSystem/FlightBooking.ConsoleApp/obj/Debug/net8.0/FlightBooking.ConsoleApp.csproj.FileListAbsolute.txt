@@ -1,0 +1,14 @@
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\bin\Debug\net8.0\FlightBooking.ConsoleApp.exe
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\bin\Debug\net8.0\FlightBooking.ConsoleApp.deps.json
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\bin\Debug\net8.0\FlightBooking.ConsoleApp.runtimeconfig.json
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\bin\Debug\net8.0\FlightBooking.ConsoleApp.dll
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\bin\Debug\net8.0\FlightBooking.ConsoleApp.pdb
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\obj\Debug\net8.0\FlightBooking.ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\obj\Debug\net8.0\FlightBooking.ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\obj\Debug\net8.0\FlightBooking.ConsoleApp.AssemblyInfo.cs
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\obj\Debug\net8.0\FlightBooking.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\obj\Debug\net8.0\FlightBooking.ConsoleApp.dll
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\obj\Debug\net8.0\refint\FlightBooking.ConsoleApp.dll
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\obj\Debug\net8.0\FlightBooking.ConsoleApp.pdb
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\obj\Debug\net8.0\FlightBooking.ConsoleApp.genruntimeconfig.cache
+C:\Users\Liezel\FlightBookingSystem_Complete\FlightBookingSystem\FlightBooking.ConsoleApp\obj\Debug\net8.0\ref\FlightBooking.ConsoleApp.dll

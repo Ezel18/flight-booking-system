@@ -1,0 +1,2 @@
+using System.Net.Http.Headers; using Microsoft.AspNetCore.Mvc; namespace WebApp.Controllers;
+public class AdminController:Controller{private readonly IHttpClientFactory _f; public AdminController(IHttpClientFactory f){_f=f;} public async Task<IActionResult> Dashboard(){var c=_f.CreateClient("api"); var token=HttpContext.Session.GetString("token"); if(!string.IsNullOrEmpty(token)) c.DefaultRequestHeaders.Authorization=new AuthenticationHeaderValue("Bearer",token); ViewBag.Data=await c.GetStringAsync("api/admin/dashboard"); return View();}}

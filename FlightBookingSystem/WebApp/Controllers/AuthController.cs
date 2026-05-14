@@ -1,0 +1,5 @@
+using System.Net.Http.Json; using Microsoft.AspNetCore.Mvc;
+namespace WebApp.Controllers;
+public class AuthController:Controller{private readonly IHttpClientFactory _f; public AuthController(IHttpClientFactory f){_f=f;} public IActionResult Login()=>View(); public IActionResult Register()=>View();
+[HttpPost] public async Task<IActionResult> Login(string email,string password){var c=_f.CreateClient("api"); var r=await c.PostAsJsonAsync("api/auth/login",new{email,password}); if(!r.IsSuccessStatusCode){ViewBag.Error="Invalid login"; return View();} var json=await r.Content.ReadAsStringAsync(); HttpContext.Session.SetString("token",json); return RedirectToAction("Index","Flights");}
+[HttpPost] public async Task<IActionResult> Register(string fullName,string email,string password){var c=_f.CreateClient("api"); var r=await c.PostAsJsonAsync("api/auth/register",new{fullName,email,password}); if(!r.IsSuccessStatusCode){ViewBag.Error="Registration failed"; return View();} return RedirectToAction("Login");}}

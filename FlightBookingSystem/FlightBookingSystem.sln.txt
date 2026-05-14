@@ -1,0 +1,1 @@
+Open each project folder separately or create a Visual Studio solution and add the three .csproj files.

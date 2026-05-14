@@ -1,0 +1,4 @@
+@model List<FlightBooking.WebApp.Controllers.FlightDto>
+<h1>Flight Search</h1>
+<form><input name="origin" placeholder="Origin"><input name="destination" placeholder="Destination"><input name="date" placeholder="yyyy-mm-dd"><button>Search</button></form>
+<table><tr><th>ID</th><th>Flight</th><th>Airline</th><th>Route</th><th>Departure</th><th>Price</th><th>Seats</th><th>Action</th></tr>@foreach(var f in Model){<tr><td>@f.Id</td><td>@f.FlightNumber</td><td>@f.Airline</td><td>@f.Origin -> @f.Destination</td><td>@f.DepartureTime</td><td>@f.BasePrice</td><td>@f.AvailableSeats</td><td><a href="/Home/Details/@f.Id">Details</a> | <a href="/Home/Book?flightId=@f.Id">Book</a></td></tr>}</table>

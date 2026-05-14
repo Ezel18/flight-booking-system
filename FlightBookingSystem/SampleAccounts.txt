@@ -1,0 +1,7 @@
+Admin Account
+Email: admin@flight.com
+Password: password123
+
+User Account
+Email: user@flight.com
+Password: password123
